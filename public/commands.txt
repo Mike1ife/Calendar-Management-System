@@ -1,0 +1,49 @@
+create calendar --name Work --timezone America/New_York
+use calendar --name Work
+create event MorningStandup from 2025-11-04T09:00 to 2025-11-04T09:30
+create event "Team Meeting" from 2025-11-04T14:00 to 2025-11-04T15:00
+create event CodeReview from 2025-11-04T16:00 to 2025-11-04T17:00
+create event "Weekly Planning" from 2025-11-04T10:00 to 2025-11-04T11:00 repeats MWF for 4 times
+print events on 2025-11-04
+print events from 2025-11-04T08:00 to 2025-11-04T18:00
+show status on 2025-11-04T14:30
+create calendar --name Personal --timezone America/Los_Angeles
+use calendar --name Personal
+create event GymSession from 2025-11-04T18:00 to 2025-11-04T19:00
+create event "Dinner with Friends" from 2025-11-04T19:30 to 2025-11-04T21:00
+create event "Weekend Hike" on 2025-11-09
+create event "Yoga Class" from 2025-11-04T07:00 to 2025-11-04T08:00 repeats TR until 2025-11-21
+print events on 2025-11-04
+edit event Subject GymSession from 2025-11-04T18:00 to 2025-11-04T19:00 with EveningWorkout
+edit events Location "Yoga Class" from 2025-11-04T07:00 with StudioA
+print events on 2025-11-05
+use calendar --name Work
+copy event "Team Meeting" on 2025-11-04T14:00 --target Personal to 2025-11-05T11:00
+use calendar --name Personal
+print events on 2025-11-05
+use calendar --name Work
+copy events on 2025-11-04 --target Personal to 2025-11-06
+use calendar --name Personal
+print events on 2025-11-06
+use calendar --name Work
+copy events between 2025-11-04 and 2025-11-08 --target Personal to 2025-11-10
+use calendar --name Personal
+print events from 2025-11-10T00:00 to 2025-11-14T23:59
+edit calendar --name Work --property name WorkCalendar
+use calendar --name WorkCalendar
+print events on 2025-11-04
+edit calendar --name WorkCalendar --property timezone America/Chicago
+print events on 2025-11-04
+create calendar --name Tokyo --timezone Asia/Tokyo
+use calendar --name Tokyo
+create event "Tokyo Conference Call" from 2025-11-04T10:00 to 2025-11-04T11:00
+create event ClientMeeting from 2025-11-04T14:00 to 2025-11-04T15:30
+print events on 2025-11-04
+copy event "Tokyo Conference Call" on 2025-11-04T10:00 --target WorkCalendar to 2025-11-04T20:00
+use calendar --name WorkCalendar
+print events on 2025-11-04
+use calendar --name Personal
+export cal personal_calendar.csv
+use calendar --name WorkCalendar
+export cal work_calendar.ics
+exit

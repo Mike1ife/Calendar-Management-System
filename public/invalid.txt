@@ -1,0 +1,77 @@
+this is completely invalid
+random text here
+just some garbage
+create event "Missing DateTime"
+create event "Bad Time" from invalid to invalid
+create event "Bad Date" from 2025-13-45T10:00 to 2025-10-24T11:00
+create event "No Time Info"
+create event on 2025-10-24
+create event from 2025-10-24T10:00 to 2025-10-24T11:00
+create event "Series No Weekdays" from 2025-10-24T10:00 to 2025-10-24T11:00 repeats 5 times
+create event "Series No Termination" from 2025-10-24T10:00 to 2025-10-24T11:00 repeats MWF
+create event "Series Invalid Weekday" from 2025-10-24T10:00 to 2025-10-24T11:00 repeats XYZ for 5 times
+create event "AllDay Series No Weekdays" on 2025-10-24 repeats 5 times
+create event "AllDay Series No Termination" on 2025-10-24 repeats MWF
+create event from 2025-10-24T10:00 to 2025-10-24T11:00
+edit event WrongProperty Test from 2025-10-24T10:00 to 2025-10-24T11:00 with Value
+edit event Subject from 2025-10-24T10:00 to 2025-10-24T11:00 with Value
+edit event Subject Test from BadTime to 2025-10-24T11:00 with Value
+edit event Subject Test from 2025-10-24T10:00 with NoToTime
+edit event Subject Test from 2025-10-24T10:00 to 2025-10-24T11:00
+edit events Location from 2025-10-24T10:00 with Value
+edit events Subject Test with NoFromTime
+edit events Location Test from 2025-10-24T10:00
+edit series Description from 2025-10-24T10:00 with Value
+edit series Subject Test with NoFromTime
+edit series Description Test from 2025-10-24T10:00
+print events
+print events on
+print events on bad-date
+print events from 2025-10-24T10:00
+print events from BadTime to 2025-10-24T11:00
+print events to 2025-10-24T11:00
+show status
+show status on
+show status on invalid-time
+show status on 2025-10-24
+export
+export cal
+export calendar
+export cal NoExtension
+export cal file.txt
+export cal file.xyz
+export cal file.pdf
+create calendar --name NoCal
+create calendar --timezone America/New_York
+create calendar --name Test --timezone BadTimezone
+create calendar InvalidFormat
+create calendar --name
+use calendar
+use calendar --name
+use calendar InvalidFormat
+edit calendar --name Test --property name
+edit calendar --name Test --property badprop Value
+edit calendar --property name NewName
+edit calendar --name Test NoProperty Value
+edit calendar --name
+copy event on 2025-10-24T10:00 --target Cal to 2025-10-25T10:00
+copy event Test --target Cal to 2025-10-25T10:00
+copy event Test on 2025-10-24T10:00 to 2025-10-25T10:00
+copy event Test on 2025-10-24T10:00 --target Cal
+copy event Test on BadTime --target Cal to 2025-10-25T10:00
+copy event Test on to 2025-10-25T10:00
+copy events --target Cal to 2025-10-25
+copy events on 2025-10-24 to 2025-10-25
+copy events on 2025-10-24 --target Cal
+copy events on BadDate --target Cal to 2025-10-25
+copy events on --target Cal to 2025-10-25
+copy events between 2025-10-24 --target Cal to 2025-10-25
+copy events between 2025-10-24 and 2025-10-30 to 2025-11-01
+copy events between 2025-10-24 and 2025-10-30 --target Cal
+copy events between BadDate and 2025-10-30 --target Cal to 2025-11-01
+copy events between 2025-10-24 and BadDate --target Cal to 2025-11-01
+copy events between and 2025-10-30 --target Cal to 2025-11-01
+copy events between 2025-10-24 and --target Cal to 2025-11-01
+completely random garbage
+invalid command structure
+exit
