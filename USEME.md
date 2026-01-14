@@ -2,18 +2,18 @@
 
 ## Project Structure
 ```
-f25-hw5-cal2-group-PDP_CAPS/
+Calendar-Management-System/
 ├── build/
 │   └── libs/
 │       └── calendar-1.0.jar      (created after building)
-├── res/
+├── public/
 │   ├── commands.txt              (example valid commands)
 │   ├── invalid.txt               (example invalid commands)
-│   ├── calendar_screenshot.png   (Google Calendar screenshot)
 │   ├── GUI Image.png             (GUI screenshot)
 │   └── class_diagram.png         (UML class diagram)
 ├── src/
-│   └── main/java/
+│   ├── main/java/
+|   └── test/java/
 └── build.gradle
 ```
 
