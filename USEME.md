@@ -37,7 +37,7 @@ The application supports three modes: GUI, Interactive, and Headless.
 java -jar build/libs/calendar-1.0.jar --mode gui
 ```
 
-This opens a graphical calendar interface. ![GUI Image](res/GUI Image.png)
+This opens a graphical calendar interface. ![GUI Image](public/GUI Image.png)
 
 ## Using the GUI
 
