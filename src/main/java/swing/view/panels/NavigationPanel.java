@@ -52,7 +52,7 @@ public class NavigationPanel extends JPanel {
     JPanel leftPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0));
     leftPanel.setOpaque(false);
 
-    ImageIcon originalIcon = new ImageIcon("public/NEU.png");
+    ImageIcon originalIcon = new ImageIcon("src/main/source/NEU.png");
     Image scaledImage = originalIcon.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
     ImageIcon icon = new ImageIcon(scaledImage);
     JLabel iconLabel = new JLabel(icon);
